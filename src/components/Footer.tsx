@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <img src={previonLogo} alt="Previon - Prevención Inteligente" className="h-12 w-auto brightness-0 invert" />
+              <img src={previonLogo} alt="Previon - Prevención Inteligente" className="h-16 w-auto brightness-0 invert" />
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Empresa líder en seguridad privada en Talca. Prevención inteligente para proteger 

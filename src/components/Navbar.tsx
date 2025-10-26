@@ -3,11 +3,11 @@ import previonLogo from "@/assets/previon-logo.png";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 w-full z-50 bg-background backdrop-blur-md border-b border-border shadow-md">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
-            <img src={previonLogo} alt="Previon Seguridad" className="h-10 w-auto" />
+            <img src={previonLogo} alt="Previon Seguridad" className="h-14 w-auto" />
           </div>
           
           <div className="hidden md:flex items-center gap-8">

@@ -21,8 +21,8 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl">
-          <div className="mb-8 animate-fade-in">
-            <img src={previonLogo} alt="Previon - Prevención Inteligente" className="h-16 w-auto mb-2" />
+          <div className="mb-8 animate-fade-in bg-background/90 backdrop-blur-sm p-6 rounded-2xl inline-block">
+            <img src={previonLogo} alt="Previon - Prevención Inteligente" className="h-24 w-auto" />
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
