@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import previonLogo from "@/assets/previon-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +9,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Shield className="h-8 w-8 text-accent" />
-              <span className="text-xl font-bold">Previon Seguridad</span>
+            <div className="mb-4">
+              <img src={previonLogo} alt="Previon - Prevención Inteligente" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-primary-foreground/80 mb-4">
-              Empresa líder en seguridad privada en Talca. Protegemos lo que más valoras 
-              con tecnología de punta y personal altamente capacitado.
+              Empresa líder en seguridad privada en Talca. Prevención inteligente para proteger 
+              lo que más valoras con tecnología de punta y personal altamente capacitado.
             </p>
           </div>
 
