@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Shield, Camera, Bell } from "lucide-react";
-import securityGuardImage from "@/assets/security-guard.jpg";
+import previonGuardImage from "@/assets/previon-guard.jpg";
 
 const Services = () => {
   const services = [
@@ -60,8 +60,8 @@ const Services = () => {
         {/* Image Section */}
         <div className="relative rounded-2xl overflow-hidden shadow-elevated">
           <img 
-            src={securityGuardImage} 
-            alt="Guardia de seguridad profesional monitoreando sistemas de vigilancia"
+            src={previonGuardImage} 
+            alt="Guardia de seguridad Previon con uniforme profesional"
             className="w-full h-[500px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
