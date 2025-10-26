@@ -1,5 +1,3 @@
-import previonLogo from "@/assets/previon-logo.png";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -9,9 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="mb-4">
-              <img src={previonLogo} alt="Previon - Prevención Inteligente" className="h-16 w-auto brightness-0 invert" />
-            </div>
+            <h3 className="font-bold text-2xl mb-4 text-accent">Previon Seguridad</h3>
             <p className="text-primary-foreground/80 mb-4">
               Empresa líder en seguridad privada en Talca. Prevención inteligente para proteger 
               lo que más valoras con tecnología de punta y personal altamente capacitado.
