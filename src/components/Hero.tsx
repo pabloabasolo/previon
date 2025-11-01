@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in">
             Protegemos lo que más <span className="text-accent">valoras</span>
