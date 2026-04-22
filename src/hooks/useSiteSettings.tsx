@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 export type SectionsVisibility = {
   hero: boolean;
+  about: boolean;
   services: boolean;
   previon_gate: boolean;
   contact: boolean;
@@ -12,6 +13,13 @@ export type HeroContent = {
   title_part1: string;
   title_highlight: string;
   subtitle: string;
+};
+
+export type AboutContent = {
+  title: string;
+  paragraph: string;
+  mission: string;
+  vision: string;
 };
 
 export type ContactInfo = {
@@ -29,17 +37,25 @@ export type ButtonLabels = {
 export type SiteSettings = {
   sections_visibility: SectionsVisibility;
   hero_content: HeroContent;
+  about_content: AboutContent;
   contact_info: ContactInfo;
   button_labels: ButtonLabels;
 };
 
 const DEFAULTS: SiteSettings = {
-  sections_visibility: { hero: true, services: true, previon_gate: false, contact: true },
+  sections_visibility: { hero: true, about: true, services: true, previon_gate: false, contact: true },
   hero_content: {
     title_part1: "Protegemos lo que más",
     title_highlight: "valoras",
     subtitle:
       "Servicios profesionales de seguridad privada en Talca. Guardias, cámaras y sistemas de alarma con tecnología de vanguardia.",
+  },
+  about_content: {
+    title: "Quiénes Somos",
+    paragraph:
+      "Previon Seguridad es una empresa chilena con sede en Talca, dedicada a brindar servicios integrales de seguridad privada con tecnología de vanguardia.",
+    mission: "Proteger personas, bienes e instalaciones con servicios de seguridad de excelencia.",
+    vision: "Ser la empresa líder en seguridad privada de la Región del Maule.",
   },
   contact_info: { phone: "+56 9 XXXX XXXX", email: "contacto@previon.cl", address: "Talca, Chile" },
   button_labels: {
@@ -59,8 +75,9 @@ export function useSiteSettings() {
       const map: Record<string, unknown> = {};
       data.forEach((row: { key: string; value: unknown }) => (map[row.key] = row.value));
       setSettings({
-        sections_visibility: (map.sections_visibility as SectionsVisibility) ?? DEFAULTS.sections_visibility,
+        sections_visibility: { ...DEFAULTS.sections_visibility, ...((map.sections_visibility as SectionsVisibility) ?? {}) },
         hero_content: (map.hero_content as HeroContent) ?? DEFAULTS.hero_content,
+        about_content: (map.about_content as AboutContent) ?? DEFAULTS.about_content,
         contact_info: (map.contact_info as ContactInfo) ?? DEFAULTS.contact_info,
         button_labels: (map.button_labels as ButtonLabels) ?? DEFAULTS.button_labels,
       });
