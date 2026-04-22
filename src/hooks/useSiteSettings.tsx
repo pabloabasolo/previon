@@ -34,12 +34,30 @@ export type ButtonLabels = {
   hero_secondary: string;
 };
 
+export type ServiceItem = {
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  image: string;
+};
+
+export type ServicesContent = {
+  section_title: string;
+  section_subtitle: string;
+  items: ServiceItem[];
+  banner_title: string;
+  banner_text: string;
+  banner_image: string;
+};
+
 export type SiteSettings = {
   sections_visibility: SectionsVisibility;
   hero_content: HeroContent;
   about_content: AboutContent;
   contact_info: ContactInfo;
   button_labels: ButtonLabels;
+  services_content: ServicesContent;
 };
 
 const DEFAULTS: SiteSettings = {
