@@ -14,9 +14,9 @@ const Navbar = () => {
             <a href="#servicios" className="text-foreground hover:text-accent transition-colors">
               Servicios
             </a>
-            <a href="#previon-gate" className="text-foreground hover:text-accent transition-colors">
+            {/* <a href="#previon-gate" className="text-foreground hover:text-accent transition-colors">
               Previon Gate
-            </a>
+            </a> */}
             <a href="#contacto" className="text-foreground hover:text-accent transition-colors">
               Contacto
             </a>
