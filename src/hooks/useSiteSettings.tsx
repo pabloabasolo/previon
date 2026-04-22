@@ -81,6 +81,18 @@ const DEFAULTS: SiteSettings = {
     hero_primary: "Solicitar Cotización",
     hero_secondary: "Conocer Servicios",
   },
+  services_content: {
+    section_title: "Nuestros Servicios",
+    section_subtitle: "Soluciones integrales de seguridad adaptadas a las necesidades de tu empresa",
+    items: [
+      { icon: "Shield", title: "Guardias de Seguridad", description: "Personal altamente capacitado y certificado para proteger tus instalaciones las 24 horas del día.", features: ["Personal certificado", "Turnos flexibles", "Informes detallados"], image: "" },
+      { icon: "Camera", title: "Sistemas de Cámaras", description: "Tecnología de vigilancia de última generación con monitoreo remoto y grabación en alta definición.", features: ["HD 4K", "Visión nocturna", "Acceso remoto"], image: "" },
+      { icon: "Bell", title: "Alarmas de Seguridad", description: "Sistemas inteligentes de alarma conectados a nuestra central de monitoreo para respuesta inmediata.", features: ["Monitoreo 24/7", "Respuesta rápida", "App móvil"], image: "" },
+    ],
+    banner_title: "Tecnología y Experiencia",
+    banner_text: "Combinamos años de experiencia con las últimas tecnologías para brindarte la mejor protección posible.",
+    banner_image: "",
+  },
 };
 
 export function useSiteSettings() {
