@@ -131,7 +131,43 @@ const Admin = () => {
           </Button>
         </Card>
 
-        {/* Contact info */}
+        {/* About content */}
+        <Card className="p-6 space-y-4">
+          <h2 className="text-xl font-bold">Quiénes Somos</h2>
+          <div>
+            <Label>Título</Label>
+            <Input
+              value={local.about_content.title}
+              onChange={(e) => setLocal({ ...local, about_content: { ...local.about_content, title: e.target.value } })}
+            />
+          </div>
+          <div>
+            <Label>Descripción de la empresa</Label>
+            <Textarea
+              rows={4}
+              value={local.about_content.paragraph}
+              onChange={(e) => setLocal({ ...local, about_content: { ...local.about_content, paragraph: e.target.value } })}
+            />
+          </div>
+          <div>
+            <Label>Misión</Label>
+            <Textarea
+              value={local.about_content.mission}
+              onChange={(e) => setLocal({ ...local, about_content: { ...local.about_content, mission: e.target.value } })}
+            />
+          </div>
+          <div>
+            <Label>Visión</Label>
+            <Textarea
+              value={local.about_content.vision}
+              onChange={(e) => setLocal({ ...local, about_content: { ...local.about_content, vision: e.target.value } })}
+            />
+          </div>
+          <Button onClick={() => save("about_content", local.about_content)} disabled={saving}>
+            Guardar Quiénes Somos
+          </Button>
+        </Card>
+
         <Card className="p-6 space-y-4">
           <h2 className="text-xl font-bold">Datos de contacto</h2>
           <div>
