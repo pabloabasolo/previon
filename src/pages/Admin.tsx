@@ -57,6 +57,18 @@ const Admin = () => {
     setSaving(false);
   };
 
+  const uploadImage = async (file: File): Promise<string | null> => {
+    const ext = file.name.split(".").pop();
+    const path = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
+    const { error } = await supabase.storage.from("site-images").upload(path, file, { upsert: false });
+    if (error) {
+      toast.error(error.message);
+      return null;
+    }
+    const { data } = supabase.storage.from("site-images").getPublicUrl(path);
+    return data.publicUrl;
+  };
+
   return (
     <div className="min-h-screen bg-background py-12 px-4">
       <div className="container mx-auto max-w-4xl space-y-8">
