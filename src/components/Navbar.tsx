@@ -15,6 +15,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
+            {v.about && (
+              <a href="#nosotros" className="text-foreground hover:text-accent transition-colors">
+                Nosotros
+              </a>
+            )}
             {v.services && (
               <a href="#servicios" className="text-foreground hover:text-accent transition-colors">
                 Servicios
