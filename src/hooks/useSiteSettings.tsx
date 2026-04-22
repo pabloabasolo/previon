@@ -110,6 +110,7 @@ export function useSiteSettings() {
         about_content: (map.about_content as AboutContent) ?? DEFAULTS.about_content,
         contact_info: (map.contact_info as ContactInfo) ?? DEFAULTS.contact_info,
         button_labels: (map.button_labels as ButtonLabels) ?? DEFAULTS.button_labels,
+        services_content: (map.services_content as ServicesContent) ?? DEFAULTS.services_content,
       });
     }
     setLoading(false);
