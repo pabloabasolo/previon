@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import PrevionGate from "@/components/PrevionGate";
+// import PrevionGate from "@/components/PrevionGate"; // Oculto temporalmente - activar cuando la app esté lista
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -11,7 +11,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Services />
-      <PrevionGate />
+      {/* <PrevionGate /> */}
       <Contact />
       <Footer />
     </div>
