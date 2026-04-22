@@ -80,6 +80,7 @@ const Admin = () => {
             {(
               [
                 ["hero", "Hero (banner principal)"],
+                ["about", "Quiénes Somos"],
                 ["services", "Servicios"],
                 ["previon_gate", "Previon Gate (app de control)"],
                 ["contact", "Contacto"],
