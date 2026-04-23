@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import PrevionGate from "@/components/PrevionGate";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       {v.previon_gate && <PrevionGate />}
       {v.contact && <Contact />}
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
