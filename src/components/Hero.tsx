@@ -36,13 +36,7 @@ const Hero = () => {
               size="lg"
               className="text-lg"
               onClick={() =>
-                window.open(
-                  `https://web.whatsapp.com/send?phone=56972159287&text=${encodeURIComponent(
-                    "Hola Previon, me gustaría solicitar una asesoría de seguridad. ¿Podrían contactarme?"
-                  )}`,
-                  "_blank",
-                  "noopener,noreferrer"
-                )
+                document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
               }
             >
               {button_labels.hero_primary}
@@ -53,13 +47,7 @@ const Hero = () => {
               size="lg"
               className="text-lg"
               onClick={() =>
-                window.open(
-                  `https://web.whatsapp.com/send?phone=56972159287&text=${encodeURIComponent(
-                    "Hola Previon, quiero conocer más sobre los servicios que ofrecen (guardias, cámaras, alarmas, Previon Gate)."
-                  )}`,
-                  "_blank",
-                  "noopener,noreferrer"
-                )
+                document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })
               }
             >
               {button_labels.hero_secondary}
