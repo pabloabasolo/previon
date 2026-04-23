@@ -47,7 +47,7 @@ const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80">
               <li>Talca, Chile</li>
               <li>contacto@previon.cl</li>
-              <li>+56 9 XXXX XXXX</li>
+              <li>+56 9 72159287</li>
               <li className="text-accent font-semibold">24/7 Emergencias</li>
             </ul>
           </div>
