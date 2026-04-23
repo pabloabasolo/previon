@@ -35,7 +35,15 @@ const Hero = () => {
               variant="cta"
               size="lg"
               className="text-lg"
-              onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                window.open(
+                  `https://wa.me/56972159287?text=${encodeURIComponent(
+                    "Hola Previon, me gustaría solicitar una asesoría de seguridad. ¿Podrían contactarme?"
+                  )}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             >
               {button_labels.hero_primary}
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -44,7 +52,15 @@ const Hero = () => {
               variant="hero"
               size="lg"
               className="text-lg"
-              onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                window.open(
+                  `https://wa.me/56972159287?text=${encodeURIComponent(
+                    "Hola Previon, quiero conocer más sobre los servicios que ofrecen (guardias, cámaras, alarmas, Previon Gate)."
+                  )}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             >
               {button_labels.hero_secondary}
             </Button>
