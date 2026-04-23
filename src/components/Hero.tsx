@@ -37,7 +37,7 @@ const Hero = () => {
               className="text-lg"
               onClick={() =>
                 window.open(
-                  `https://wa.me/56972159287?text=${encodeURIComponent(
+                  `https://web.whatsapp.com/send?phone=56972159287&text=${encodeURIComponent(
                     "Hola Previon, me gustaría solicitar una asesoría de seguridad. ¿Podrían contactarme?"
                   )}`,
                   "_blank",
@@ -54,7 +54,7 @@ const Hero = () => {
               className="text-lg"
               onClick={() =>
                 window.open(
-                  `https://wa.me/56972159287?text=${encodeURIComponent(
+                  `https://web.whatsapp.com/send?phone=56972159287&text=${encodeURIComponent(
                     "Hola Previon, quiero conocer más sobre los servicios que ofrecen (guardias, cámaras, alarmas, Previon Gate)."
                   )}`,
                   "_blank",
