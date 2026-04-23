@@ -31,11 +31,21 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="cta" size="lg" className="text-lg">
+            <Button
+              variant="cta"
+              size="lg"
+              className="text-lg"
+              onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
+            >
               {button_labels.hero_primary}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="hero" size="lg" className="text-lg">
+            <Button
+              variant="hero"
+              size="lg"
+              className="text-lg"
+              onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
+            >
               {button_labels.hero_secondary}
             </Button>
           </div>
