@@ -5,7 +5,7 @@ import { useSiteSettings } from "@/hooks/useSiteSettings";
 
 const Hero = () => {
   const { settings } = useSiteSettings();
-  const { hero_content, button_labels } = settings;
+  const { hero_content, button_labels, hero_stats } = settings;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -55,18 +55,12 @@ const Hero = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-accent/30">
-            <div>
-              <div className="text-4xl font-bold text-accent mb-2">15+</div>
-              <div className="text-primary-foreground/80">Años de Experiencia</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-accent mb-2">500+</div>
-              <div className="text-primary-foreground/80">Clientes Satisfechos</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-accent mb-2">24/7</div>
-              <div className="text-primary-foreground/80">Monitoreo Continuo</div>
-            </div>
+            {hero_stats.items.map((stat, i) => (
+              <div key={i}>
+                <div className="text-4xl font-bold text-accent mb-2">{stat.value}</div>
+                <div className="text-primary-foreground/80">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -143,6 +143,41 @@ const Admin = () => {
           </Button>
         </Card>
 
+        {/* Hero stats */}
+        <Card className="p-6 space-y-4">
+          <h2 className="text-xl font-bold">Estadísticas del Hero</h2>
+          <p className="text-sm text-muted-foreground">Edita los números y etiquetas (ej: años de experiencia, clientes satisfechos).</p>
+          {local.hero_stats.items.map((stat, idx) => (
+            <div key={idx} className="grid grid-cols-2 gap-3 p-3 border rounded-lg">
+              <div>
+                <Label>Valor</Label>
+                <Input
+                  value={stat.value}
+                  onChange={(e) => {
+                    const items = [...local.hero_stats.items];
+                    items[idx] = { ...stat, value: e.target.value };
+                    setLocal({ ...local, hero_stats: { items } });
+                  }}
+                />
+              </div>
+              <div>
+                <Label>Etiqueta</Label>
+                <Input
+                  value={stat.label}
+                  onChange={(e) => {
+                    const items = [...local.hero_stats.items];
+                    items[idx] = { ...stat, label: e.target.value };
+                    setLocal({ ...local, hero_stats: { items } });
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+          <Button onClick={() => save("hero_stats", local.hero_stats)} disabled={saving}>
+            Guardar estadísticas
+          </Button>
+        </Card>
+
         {/* About content */}
         <Card className="p-6 space-y-4">
           <h2 className="text-xl font-bold">Quiénes Somos</h2>
