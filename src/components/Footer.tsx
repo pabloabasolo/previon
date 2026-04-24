@@ -1,5 +1,9 @@
+import { useSiteSettings } from "@/hooks/useSiteSettings";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { settings } = useSiteSettings();
+  const v = settings.sections_visibility;
 
   return (
     <footer className="bg-primary text-primary-foreground py-12 border-t border-accent/20">
@@ -33,11 +37,13 @@ const Footer = () => {
                   Alarmas de Seguridad
                 </a>
               </li>
-              <li>
-                <a href="#previon-gate" className="hover:text-accent transition-colors">
-                  Previon Gate
-                </a>
-              </li>
+              {v.previon_gate && (
+                <li>
+                  <a href="#previon-gate" className="hover:text-accent transition-colors">
+                    Previon Gate
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
 
