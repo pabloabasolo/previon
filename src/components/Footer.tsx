@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="font-bold text-2xl mb-4 text-accent">Previon Seguridad</h3>
-            <p className="text-primary-foreground/80 mb-4">
+            <p className="text-primary-foreground/80 mb-4 text-justify">
               Empresa líder en seguridad privada en Talca. Prevención inteligente para proteger 
               lo que más valoras con tecnología de punta y personal altamente capacitado.
             </p>
