@@ -16,22 +16,22 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-8">
             {v.about && (
-              <a href="#nosotros" className="text-foreground hover:text-accent transition-colors">
+              <a href="#nosotros" className="font-bold text-muted-foreground hover:text-accent transition-colors">
                 Nosotros
               </a>
             )}
             {v.services && (
-              <a href="#servicios" className="text-foreground hover:text-accent transition-colors">
+              <a href="#servicios" className="font-bold text-muted-foreground hover:text-accent transition-colors">
                 Servicios
               </a>
             )}
             {v.previon_gate && (
-              <a href="#previon-gate" className="text-foreground hover:text-accent transition-colors">
+              <a href="#previon-gate" className="font-bold text-muted-foreground hover:text-accent transition-colors">
                 Previon Gate
               </a>
             )}
             {v.contact && (
-              <a href="#contacto" className="text-foreground hover:text-accent transition-colors">
+              <a href="#contacto" className="font-bold text-muted-foreground hover:text-accent transition-colors">
                 Contacto
               </a>
             )}
