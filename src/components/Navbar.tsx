@@ -37,9 +37,6 @@ const Navbar = () => {
             )}
           </div>
 
-          <Button variant="cta" size="lg">
-            {settings.button_labels.nav_cta}
-          </Button>
         </div>
       </div>
     </nav>
