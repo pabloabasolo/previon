@@ -51,6 +51,9 @@ export type ServicesContent = {
   banner_image: string;
 };
 
+export type HeroStat = { value: string; label: string };
+export type HeroStats = { items: HeroStat[] };
+
 export type SiteSettings = {
   sections_visibility: SectionsVisibility;
   hero_content: HeroContent;
@@ -58,6 +61,7 @@ export type SiteSettings = {
   contact_info: ContactInfo;
   button_labels: ButtonLabels;
   services_content: ServicesContent;
+  hero_stats: HeroStats;
 };
 
 const DEFAULTS: SiteSettings = {
@@ -93,6 +97,13 @@ const DEFAULTS: SiteSettings = {
     banner_text: "Combinamos años de experiencia con las últimas tecnologías para brindarte la mejor protección posible.",
     banner_image: "",
   },
+  hero_stats: {
+    items: [
+      { value: "15+", label: "Años de Experiencia" },
+      { value: "500+", label: "Clientes Satisfechos" },
+      { value: "24/7", label: "Monitoreo Continuo" },
+    ],
+  },
 };
 
 export function useSiteSettings() {
@@ -111,6 +122,7 @@ export function useSiteSettings() {
         contact_info: (map.contact_info as ContactInfo) ?? DEFAULTS.contact_info,
         button_labels: (map.button_labels as ButtonLabels) ?? DEFAULTS.button_labels,
         services_content: (map.services_content as ServicesContent) ?? DEFAULTS.services_content,
+        hero_stats: (map.hero_stats as HeroStats) ?? DEFAULTS.hero_stats,
       });
     }
     setLoading(false);
